@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="ETtoday 大陸新聞智慧資料台同事試閱版，提供政治制度搜尋、歷史年表、名單比較與功能需求回饋。" />
+    <meta name="theme-color" content="#d9272e" />
+    <title>ETtoday 大陸新聞智慧資料台｜同事試閱版</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">跳至主要內容</a>
+    <header class="site-header">
+      <div class="shell header-row">
+        <button class="brand reset-button" type="button" data-route="search" aria-label="回到資料搜尋">
+          <span class="brand-mark" aria-hidden="true">E</span>
+          <span><strong>ETtoday 大陸新聞智慧資料台</strong><small>COLLEAGUE PREVIEW · 同事試閱版</small></span>
+        </button>
+        <button class="menu-button" type="button" aria-expanded="false" aria-controls="main-nav">選單</button>
+        <nav id="main-nav" class="main-nav" aria-label="主要功能">
+          <button type="button" class="nav-button active" data-route="search">資料搜尋</button>
+          <button type="button" class="nav-button" data-route="roadmap">功能藍圖</button>
+          <button type="button" class="nav-button" data-route="feedback">同事需求回饋</button>
+        </nav>
+        <div class="preview-badge"><span aria-hidden="true"></span>公開試閱</div>
+      </div>
+    </header>
+
+    <main id="main-content" class="shell">
+      <section id="search-view" class="view active" data-view="search" aria-labelledby="search-title">
+        <div class="preview-notice" role="note">
+          <strong>試閱提醒</strong>
+          <span>本頁只使用公開示範資料，內容仍待新聞編輯查核，不可直接視為刊登稿。</span>
+        </div>
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">NEWSROOM KNOWLEDGE DESK</p>
+            <h1 id="search-title">先查資料，<br /><em>再做新聞。</em></h1>
+            <p>把制度背景、名詞解釋、歷史節點與人事快照放進同一個可查、可比、可追來源的編輯工作台。</p>
+            <div class="hero-stats" aria-label="示範內容摘要">
+              <span><strong>3</strong>制度條目</span>
+              <span><strong>8</strong>歷史節點</span>
+              <span><strong>3</strong>名單快照</span>
+            </div>
+          </div>
+          <form id="search-form" class="search-panel" autocomplete="off">
+            <label for="search-input">搜尋政治制度</label>
+            <div class="search-line">
+              <input id="search-input" type="search" placeholder="例如：政治局、中央委員會、常委會" spellcheck="false" />
+              <button type="submit" class="button primary">搜尋資料</button>
+            </div>
+            <div class="quick-search" aria-label="快速搜尋">
+              <span>快速查詢</span>
+              <button type="button" data-query="政治局">政治局</button>
+              <button type="button" data-query="中央委員會">中央委員會</button>
+              <button type="button" data-query="常委會">常委會</button>
+            </div>
+          </form>
+        </div>
+
+        <div id="search-summary" class="section-heading"></div>
+        <section id="search-results" class="result-list" aria-live="polite"></section>
+        <section id="empty-search" class="empty-state" hidden>
+          <span class="empty-icon" aria-hidden="true">⌕</span>
+          <h2>目前沒有相符的示範資料</h2>
+          <p>試閱版不會自行補寫不存在的內容。請改用「政治局」或「中央委員會」搜尋。</p>
+        </section>
+        <article id="entry-detail" class="entry-detail" hidden aria-live="polite"></article>
+      </section>
+
+      <section id="roadmap-view" class="view" data-view="roadmap" hidden aria-labelledby="roadmap-title">
+        <div class="page-intro">
+          <p class="eyebrow">PRODUCT ROADMAP</p>
+          <h1 id="roadmap-title">下一步，讓資料真正進入編輯流程。</h1>
+          <p>以下功能是規劃展示，不代表已完成，也不會在本試閱站產生新聞內容。</p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <span class="feature-index">01</span><span class="dev-status">尚未開發</span>
+            <h2>全文生成工作區</h2>
+            <p>將已核實背景與當日新聞素材分開標示，保留逐段來源，產出供編輯審查的草稿。</p>
+            <div class="feature-mockup text-lines" aria-label="全文生成介面示意"><i></i><i></i><i></i><i></i></div>
+            <button type="button" class="button disabled-demo" disabled>功能尚未開放</button>
+          </article>
+          <article class="feature-card">
+            <span class="feature-index">02</span><span class="dev-status">尚未開發</span>
+            <h2>圖文視覺化</h2>
+            <p>把時間、人物、職務與事件轉為可供網站或社群使用的圖卡，並保留資料版本。</p>
+            <div class="feature-mockup chart-mockup" aria-label="圖表介面示意"><i></i><i></i><i></i><i></i><i></i></div>
+            <button type="button" class="button disabled-demo" disabled>功能尚未開放</button>
+          </article>
+          <article class="feature-card">
+            <span class="feature-index">03</span><span class="dev-status">尚未開發</span>
+            <h2>人物關係圖</h2>
+            <p>依公開來源呈現人物、機構與任職關係，支援指定日期查詢，避免把不同時期混在一起。</p>
+            <div class="feature-mockup network-mockup" aria-label="人物關係圖示意"><i></i><i></i><i></i><i></i><i></i><b></b></div>
+            <button type="button" class="button disabled-demo" disabled>功能尚未開放</button>
+          </article>
+        </div>
+        <div class="roadmap-cta">
+          <div><p class="eyebrow">YOUR PRIORITY MATTERS</p><h2>你最需要哪一項？</h2><p>用一分鐘留下需求，協助決定下一階段開發順序。</p></div>
+          <button type="button" class="button primary" data-route="feedback">前往需求回饋</button>
+        </div>
+      </section>
+
+      <section id="feedback-view" class="view" data-view="feedback" hidden aria-labelledby="feedback-title">
+        <div class="feedback-layout">
+          <div class="page-intro feedback-copy">
+            <p class="eyebrow">COLLEAGUE FEEDBACK</p>
+            <h1 id="feedback-title">你的工作痛點，決定我們先做什麼。</h1>
+            <p>本頁目前不會把資料送到任何伺服器。填寫後請按「複製回饋內容」，再貼到你平常與專案負責人聯繫的管道。</p>
+            <div class="privacy-card"><strong>不會自動送出</strong><span>內容只留在你的瀏覽器頁面，重新整理後即清除。</span></div>
+          </div>
+          <form id="feedback-form" class="feedback-form">
+            <fieldset>
+              <legend><span>01</span>你的使用情境</legend>
+              <label>主要工作角色
+                <select name="role">
+                  <option value="記者／採訪編輯">記者／採訪編輯</option>
+                  <option value="新聞編輯／核稿">新聞編輯／核稿</option>
+                  <option value="視覺／社群編輯">視覺／社群編輯</option>
+                  <option value="主管／專案管理">主管／專案管理</option>
+                  <option value="其他">其他</option>
+                </select>
+              </label>
+              <label>稱呼（選填）<input name="name" placeholder="方便後續釐清需求" /></label>
+            </fieldset>
+            <fieldset>
+              <legend><span>02</span>最希望優先開發</legend>
+              <div class="choice-grid">
+                <label class="choice"><input type="checkbox" name="priority" value="全文生成工作區" /><span><strong>全文生成</strong><small>帶入已核實背景與來源</small></span></label>
+                <label class="choice"><input type="checkbox" name="priority" value="圖文視覺化" /><span><strong>圖文視覺化</strong><small>產出圖卡與時間軸</small></span></label>
+                <label class="choice"><input type="checkbox" name="priority" value="人物關係圖" /><span><strong>人物關係圖</strong><small>查任職與機構關係</small></span></label>
+                <label class="choice"><input type="checkbox" name="priority" value="資料管理與查核" /><span><strong>資料管理</strong><small>新增、查核、版本紀錄</small></span></label>
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend><span>03</span>修改建議</legend>
+              <label>你最常查什麼資料？<textarea name="useCase" rows="3" placeholder="例如：開會前快速確認歷屆名單與職務變化"></textarea></label>
+              <label>這個試閱版哪裡最需要修改？<textarea name="suggestion" rows="5" placeholder="功能、文字、版面或操作流程都可以"></textarea></label>
+            </fieldset>
+            <div id="feedback-preview" class="feedback-preview" aria-live="polite">填寫後，這裡會顯示可複製的回饋摘要。</div>
+            <button type="submit" class="button primary wide">一鍵複製回饋內容</button>
+            <p class="form-note">按下按鈕只會複製文字，不會傳送或儲存資料。</p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell footer-row"><span>ETtoday 大陸新聞智慧資料台｜同事試閱版</span><span>公開示範資料 · 非正式新聞稿</span></div>
+    </footer>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <script src="./data.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
